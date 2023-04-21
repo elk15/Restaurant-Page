@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root{
+    --main-color: #701515;
+    --main-font: 'Poltawski Nowy', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+    min-height: 100vh;
+}
+
+.header {
+    flex: 0 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 70px;
+    border: 2px solid black;
+}
+
+.img {
+    width: 200px;
+}
+
+.location {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.location a{
+    text-decoration: none;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--main-font);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.location a:hover{
+    color: #000;
+}
+
+nav ul {
+    list-style-type: none;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    color: #000;
+}
+
+
+@media only screen and (max-width: 980px) {
+    #content{
+        flex-direction: column;
+    }
+
+    .header {
+        flex: 0 1 100px;
+        flex-direction: row;
+    }
+
+    .location{
+        display: none;
+    }
+}
