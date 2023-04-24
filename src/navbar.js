@@ -6,7 +6,7 @@ const createNavBar = (() => {
 
     const navLogo = new Image();
     navLogo.src = RedLogo;
-    navLogo.classList.add('img');
+    navLogo.classList.add('logo');
     header.appendChild(navLogo);
 
     const location = document.createElement('div');
