@@ -3,6 +3,8 @@
 :root{
     --main-color: #701515;
     --main-font: 'Poltawski Nowy', serif;
+    --tall-pic-height: 700px;
+    --short-pic-height: 350px;
 }
 
 * {
@@ -33,7 +35,7 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-x: scroll;
+    padding: 0 10px;
 }
 
 .logo {
@@ -95,21 +97,23 @@ nav ul li:hover{
 }
 
 .images-grid {
-    background-color: #701515;
     flex: 1;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.dish-1 {
-    grid-row: 1/1;
-    grid-column: 1/1;
+.col {
+    flex: 1;
+    max-width: 50%;
 }
 
-.img {
-    width: 100%;
+
+
+.col .img {
+  width: 100%;
+  margin-top: 10px;
+  vertical-align: middle;
 }
 
 
@@ -144,13 +148,27 @@ nav ul li:hover{
 
     .responsive-nav {
         width: 100%;
-        min-height: calc(100vh - 125px);
+        min-height: calc(100vh - 100px);
         display: flex;
         padding-top: 20px;
         position: absolute;
-        top: 125px;
+        top: 100px;
         left: 0;
         background-color: #FFF;
         border-top: 1px gray solid;
     }
+
+    
 }
+
+@media only screen and (max-width: 600px) {
+    .images-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .col {
+        max-width: 100%;
+    }
+}
+

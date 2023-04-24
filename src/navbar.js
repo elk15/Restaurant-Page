@@ -1,6 +1,7 @@
 import RedLogo from './imgs/logo-red.png';
 
 const createNavBar = (() => {
+    const body = document.querySelector('body');
     const header = document.createElement('header');
     header.classList.add('header');
 
@@ -51,6 +52,7 @@ const createNavBar = (() => {
         ul.classList.toggle('responsive-nav');
         menuBtn.classList.toggle('open-icon');
         menuBtn.classList.toggle('close-icon');
+        body.style.overflow = body.style.overflow === 'hidden' ? 'auto' : 'hidden';
     });
 
     return {
