@@ -1,6 +1,6 @@
 import RedLogo from './imgs/logo-red.png';
 
-const createNavBar = () => {
+const createNavBar = (() => {
     const header = document.createElement('header');
     header.classList.add('header');
 
@@ -53,7 +53,14 @@ const createNavBar = () => {
         menuBtn.classList.toggle('close-icon');
     });
 
-    return header;
-};
+    return {
+        header,
+        menuLink,
+        ourStoryLink,
+        hoursLink,
+        communityLink,
+        contactLink,
+    };
+})();
 
 export default createNavBar;

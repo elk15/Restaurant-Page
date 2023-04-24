@@ -1,4 +1,5 @@
-import createWebsite from './website';
+import NavBar from './navbar';
 import './style.css';
 
-createWebsite();
+const content = document.getElementById('content');
+content.appendChild(NavBar.header);
