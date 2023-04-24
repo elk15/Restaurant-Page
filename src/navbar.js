@@ -44,6 +44,15 @@ const createNavBar = () => {
     nav.appendChild(ul);
     header.appendChild(nav);
 
+    const menuBtn = document.createElement('div');
+    menuBtn.classList.add('open-icon');
+    header.appendChild(menuBtn);
+    menuBtn.addEventListener('click', () => {
+        ul.classList.toggle('responsive-nav');
+        menuBtn.classList.toggle('open-icon');
+        menuBtn.classList.toggle('close-icon');
+    });
+
     return header;
 };
 
