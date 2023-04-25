@@ -94,6 +94,8 @@ const createHome = (() => {
     main.appendChild(lowerGrid);
     return {
         main,
+        menuBtn,
+        locationBtn,
     };
 })();
 
