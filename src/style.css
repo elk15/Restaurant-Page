@@ -36,6 +36,8 @@ main {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
+    gap: 100px;
+    align-items: center;
 }
 
 .logo {
@@ -108,12 +110,62 @@ nav ul li:hover{
     max-width: 50%;
 }
 
-
-
 .col .img {
   width: 100%;
   margin-top: 10px;
   vertical-align: middle;
+}
+
+.description {
+    text-align: center;
+    width: 70%
+}
+
+.lower-grid {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.lower-grid .row {
+    display: flex;
+    gap: 10px;
+}
+
+.lower-grid .img {
+    flex: 1;
+    width: 100%;
+}
+
+.menu-div, .location-div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 50px ;
+
+}
+
+.lower-grid .btn {
+    width: 150px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    margin-top: 50px;
+}
+
+.lower-grid .btn:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    color: #000;
 }
 
 
@@ -158,6 +210,27 @@ nav ul li:hover{
         border-top: 1px gray solid;
     }
 
+    .description{
+        width: 95%;
+    }
+
+    .lower-grid .row {
+        flex-direction: column-reverse;
+    }
+
+
+    .menu-div, .location-div {
+        min-height: 400px;
+    }
+
+    .lower-grid > .row ~.row {
+        flex-direction: column;
+    }
+
+    .text-wrapper {
+        padding: 20px 20px;
+    }
+
     
 }
 
@@ -169,6 +242,12 @@ nav ul li:hover{
 
     .col {
         max-width: 100%;
+    }
+
+    .description{
+        width: 100%;
+        font-size: 15px;
+
     }
 }
 
