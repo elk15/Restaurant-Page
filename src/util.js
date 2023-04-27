@@ -20,7 +20,7 @@ const createDescription = (title, text) => {
     const newTitle = document.createElement('h2');
     newTitle.textContent = title;
     const newParagraph = document.createElement('p');
-    newParagraph.textContent = text;
+    newParagraph.innerHTML = text;
     newDescription.appendChild(newTitle);
     newDescription.appendChild(newParagraph);
     return newDescription;

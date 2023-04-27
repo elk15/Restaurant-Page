@@ -264,7 +264,7 @@ nav ul li:hover{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .menu-section li p {
