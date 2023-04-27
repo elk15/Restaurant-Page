@@ -13,6 +13,52 @@
     box-sizing: border-box;
 }
 
+/* Hero Image for each page */
+
+.hero-img {
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    z-index: -100;
+    
+}
+
+.hero-img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-img .logo {
+    position: absolute;
+    width: 200px;
+    bottom: 5%;
+    left: calc(50% - 100px);
+
+    
+}
+
+/* Description for each page */
+
+.description-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    max-width: 1000px;
+    padding: 10px;
+}
+
+.description-wrapper h2 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+/* Main content and and nav bar */
+
 #content {
     display: flex;
     min-height: 100vh;
@@ -36,7 +82,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    gap: 100px;
+    gap: 80px;
     align-items: center;
 }
 
@@ -99,6 +145,8 @@ nav ul li:hover{
     cursor: pointer;
     color: #000;
 }
+
+/* Homepage */
 
 .images-grid {
     flex: 1;
@@ -170,8 +218,6 @@ nav ul li:hover{
     font-weight: 400;
 }
 
-
-
 .lower-grid .btn {
     width: 200px;
     padding: 10px;
@@ -190,29 +236,43 @@ nav ul li:hover{
     color: #000;
 }
 
-/* Hero Image css */
+/* Menu Css */
+.menus-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 15px;
+    font-family: var(--main-font);
+    font-size: 1.3rem;
+    padding-bottom: 80px;
+}
 
-.hero-img {
-    position: relative;
-    width: 100%;
+.menu-section {
+    max-width: 450px;
+    padding: 15px;
+}
+
+.menu-section h3 {
+    padding-bottom: 20px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.menu-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-section li p {
+    font-style: italic;
     padding-top: 10px;
-    z-index: -100;
-    
 }
 
-.hero-img img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero-img .logo {
-    position: absolute;
-    width: 200px;
-    bottom: 5%;
-    left: calc(50% - 100px);
-
-    
+.menu-section li h4 {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -283,6 +343,9 @@ nav ul li:hover{
         left: calc(50vw - 50px);
     }
 
+    .menus-container {
+        justify-content: center;
+    }
     
 }
 
