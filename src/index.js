@@ -8,8 +8,8 @@ const content = document.getElementById('content');
 content.appendChild(NavBar.header);
 
 // content.appendChild(Home.main);
-// content.appendChild(Menu.main);
-content.appendChild(OurStory.main);
+content.appendChild(Menu.main);
+// content.appendChild(OurStory.main);
 
 // NavBar.menuLink.addEventListener('click', () => {
 //     main.innerHTML = '';
