@@ -84,6 +84,8 @@ main {
     padding: 0 10px;
     gap: 80px;
     align-items: center;
+    padding-bottom: 80px;
+
 }
 
 .logo {
@@ -240,11 +242,11 @@ nav ul li:hover{
 .menus-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1000px;
     gap: 15px;
     font-family: var(--main-font);
     font-size: 1.3rem;
-    padding-bottom: 80px;
 }
 
 .menu-section {
