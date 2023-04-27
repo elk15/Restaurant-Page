@@ -190,6 +190,31 @@ nav ul li:hover{
     color: #000;
 }
 
+/* Hero Image css */
+
+.hero-img {
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    z-index: -100;
+    
+}
+
+.hero-img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-img .logo {
+    position: absolute;
+    width: 200px;
+    bottom: 5%;
+    left: calc(50% - 100px);
+
+    
+}
+
 
 @media only screen and (max-width: 980px) {
     #content{
@@ -251,6 +276,11 @@ nav ul li:hover{
 
     .text-wrapper {
         padding: 20px 20px;
+    }
+
+    .hero-img .logo {
+        width: 100px;
+        left: calc(50vw - 50px);
     }
 
     
