@@ -48,11 +48,15 @@ const createNavBar = (() => {
     const menuBtn = document.createElement('div');
     menuBtn.classList.add('open-icon');
     header.appendChild(menuBtn);
-    menuBtn.addEventListener('click', () => {
+
+    const controlResponsiveNav = () => {
         ul.classList.toggle('responsive-nav');
         menuBtn.classList.toggle('open-icon');
         menuBtn.classList.toggle('close-icon');
         body.style.overflow = body.style.overflow === 'hidden' ? 'auto' : 'hidden';
+    };
+    menuBtn.addEventListener('click', () => {
+        controlResponsiveNav();
     });
 
     return {
@@ -62,6 +66,7 @@ const createNavBar = (() => {
         hoursLink,
         communityLink,
         contactLink,
+        controlResponsiveNav,
     };
 })();
 

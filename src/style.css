@@ -64,6 +64,10 @@
     min-height: 100vh;
 }
 
+#content > div {
+    width: 100%;
+}
+
 .header {
     flex: 0 1 250px;
     display: flex;

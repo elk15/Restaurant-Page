@@ -10,14 +10,35 @@ import './style.css';
 const content = document.getElementById('content');
 content.appendChild(NavBar.header);
 
-// content.appendChild(Home.main);
-// content.appendChild(Menu.main);
-// content.appendChild(OurStory.main);
-// content.appendChild(Community.main);
-// content.appendChild(HoursAndLocation.main);
-content.appendChild(Contact.main);
+const main = document.createElement('div');
+content.appendChild(main);
+main.appendChild(Home.main);
 
-// NavBar.menuLink.addEventListener('click', () => {
-//     main.innerHTML = '';
-//     main.appendChild(Menu.menu);
-// });
+const width = window.innerWidth;
+const redirectToPage = (Page) => {
+    main.innerHTML = '';
+    main.appendChild(Page.main);
+    if (width <= 900) {
+        NavBar.controlResponsiveNav();
+    }
+};
+
+NavBar.menuLink.addEventListener('click', () => {
+    redirectToPage(Menu);
+});
+
+NavBar.ourStoryLink.addEventListener('click', () => {
+    redirectToPage(OurStory);
+});
+
+NavBar.hoursLink.addEventListener('click', () => {
+    redirectToPage(HoursAndLocation);
+});
+
+NavBar.communityLink.addEventListener('click', () => {
+    redirectToPage(Community);
+});
+
+NavBar.contactLink.addEventListener('click', () => {
+    redirectToPage(Contact);
+});
