@@ -4,17 +4,16 @@ import { createHeroImage, createDescription } from './util';
 const createInput = (type, name) => {
     const label = document.createElement('label');
     label.htmlFor = name;
-    label.innerHTML = `${name} - Required`;
+    label.innerHTML = `${name} - <span>Required</span>`;
 
     const input = type === 'textarea' ? document.createElement(type) : document.createElement('input');
-    if (type === 'textarea') {
-        input.innerHTML = `${name}`;
-    } else {
+    if (type !== 'textarea') {
         input.type = type;
-        input.placeholder = name;
     }
+    input.placeholder = name;
     input.name = name;
     input.id = name;
+    input.required = true;
 
     const div = document.createElement('div');
     div.appendChild(label);
@@ -38,10 +37,10 @@ const createContact = (() => {
     form.appendChild(createInput('number', 'Phone Number'));
     form.appendChild(createInput('textarea', 'Your Message'));
 
-    const submitBtn = document.createElement('input');
+    const submitBtn = document.createElement('button');
     submitBtn.classList.add('btn');
     submitBtn.type = 'submit';
-    submitBtn.value = 'Send';
+    submitBtn.innerHTML = 'Send';
     form.appendChild(submitBtn);
 
     return {

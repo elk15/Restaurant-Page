@@ -220,7 +220,7 @@ nav ul li:hover{
     font-weight: 400;
 }
 
-.lower-grid .btn {
+.btn {
     width: 200px;
     padding: 10px;
     background-color: #FFF;
@@ -232,7 +232,7 @@ nav ul li:hover{
     font-size: 1.1rem;
 }
 
-.lower-grid .btn:hover {
+.btn:hover {
     cursor: pointer;
     border: 1px solid #000;
     color: #000;
@@ -291,6 +291,42 @@ nav ul li:hover{
 .map iframe{
     width: 600px;
     height: 450px;
+}
+
+/* Contact page */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    font-family: var(--main-font);
+}
+
+.contact-form label{
+    font-weight: 600;
+}
+
+.contact-form label span {
+    color: rgb(126, 126, 126);
+    font-style: italic;
+
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #000;
+    font-family: var(--main-font);
+    font-size: 1.3rem;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    font-family: var(--main-font);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgb(126, 126, 126);
+    opacity: 1;
 }
 
 
@@ -381,7 +417,7 @@ nav ul li:hover{
         width: 100%;
     }
     
-    .map iframe, .hours-location{
+    .map iframe, .hours-location, .contact-form{
         width: 300px;
     }
 
