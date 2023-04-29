@@ -277,6 +277,22 @@ nav ul li:hover{
     justify-content: space-between;
 }
 
+/* Hours and Location Page */
+
+.hours-location {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.map iframe{
+    width: 600px;
+    height: 450px;
+}
+
 
 @media only screen and (max-width: 980px) {
     #content{
@@ -363,6 +379,15 @@ nav ul li:hover{
 
     .description{
         width: 100%;
+    }
+    
+    .map iframe, .hours-location{
+        width: 300px;
+    }
+
+    .hours-location {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
