@@ -1,5 +1,5 @@
 # Restaurant-Page
-Restaurant page using webpack with multiple pages (home, menu, contact etc) and fully responsive design.
+Restaurant site using webpack with multiple pages (home, menu, contact etc) and fully responsive design.
 
 Images are from unsplash.
 Credit to the artists : Rick Barrett, Edward Howell, MGG Vitchakorn, Margherita Turrin, Casey Lee,
