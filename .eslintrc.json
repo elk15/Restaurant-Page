@@ -13,6 +13,7 @@
     "rules": {
         "no-console": "off",
 	    "indent": ["error", 4],
-	    "max-classes-per-file": ["error", 2]    
+	    "max-classes-per-file": ["error", 2],
+        "prefer-const" : "off"    
     }
 }

@@ -14,8 +14,9 @@ const main = document.createElement('div');
 content.appendChild(main);
 main.appendChild(Home.main);
 
-const width = window.innerWidth;
 const redirectToPage = (Page) => {
+    let width = window.innerWidth;
+    console.log(width);
     main.innerHTML = '';
     main.appendChild(Page.main);
     if (width <= 900) {
