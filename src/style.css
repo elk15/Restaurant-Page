@@ -96,6 +96,10 @@ main {
     width: 200px;
 }
 
+header .logo:hover {
+    cursor: pointer;
+}
+
 .location {
     border-top: 1px solid black;
     border-bottom: 1px solid black;

@@ -16,10 +16,9 @@ main.appendChild(Home.main);
 
 const redirectToPage = (Page) => {
     let width = window.innerWidth;
-    console.log(width);
     main.innerHTML = '';
     main.appendChild(Page.main);
-    if (width <= 900) {
+    if (width <= 900 && NavBar.menuList.classList.contains('responsive-nav')) {
         NavBar.controlResponsiveNav();
     }
 };
@@ -42,4 +41,8 @@ NavBar.communityLink.addEventListener('click', () => {
 
 NavBar.contactLink.addEventListener('click', () => {
     redirectToPage(Contact);
+});
+
+NavBar.navLogo.addEventListener('click', () => {
+    redirectToPage(Home);
 });

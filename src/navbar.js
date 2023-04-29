@@ -20,29 +20,29 @@ const createNavBar = (() => {
     header.appendChild(location);
 
     const nav = document.createElement('nav');
-    const ul = document.createElement('ul');
+    const menuList = document.createElement('ul');
 
     const menuLink = document.createElement('li');
     menuLink.textContent = 'MENU';
-    ul.appendChild(menuLink);
+    menuList.appendChild(menuLink);
 
     const ourStoryLink = document.createElement('li');
     ourStoryLink.textContent = 'OUR STORY';
-    ul.appendChild(ourStoryLink);
+    menuList.appendChild(ourStoryLink);
 
     const hoursLink = document.createElement('li');
     hoursLink.textContent = 'HOURS & LOCATION';
-    ul.appendChild(hoursLink);
+    menuList.appendChild(hoursLink);
 
     const communityLink = document.createElement('li');
     communityLink.textContent = 'COMMUNITY';
-    ul.appendChild(communityLink);
+    menuList.appendChild(communityLink);
 
     const contactLink = document.createElement('li');
     contactLink.textContent = 'CONTACT';
-    ul.appendChild(contactLink);
+    menuList.appendChild(contactLink);
 
-    nav.appendChild(ul);
+    nav.appendChild(menuList);
     header.appendChild(nav);
 
     const menuBtn = document.createElement('div');
@@ -50,7 +50,7 @@ const createNavBar = (() => {
     header.appendChild(menuBtn);
 
     const controlResponsiveNav = () => {
-        ul.classList.toggle('responsive-nav');
+        menuList.classList.toggle('responsive-nav');
         menuBtn.classList.toggle('open-icon');
         menuBtn.classList.toggle('close-icon');
         body.style.overflow = body.style.overflow === 'hidden' ? 'auto' : 'hidden';
@@ -61,11 +61,13 @@ const createNavBar = (() => {
 
     return {
         header,
+        navLogo,
         menuLink,
         ourStoryLink,
         hoursLink,
         communityLink,
         contactLink,
+        menuList,
         controlResponsiveNav,
     };
 })();
