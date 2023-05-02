@@ -1,4 +1,4 @@
- # ignore ALL .log files
+# ignore ALL .log files
 *.log
 
 # ignore ALL files in ANY directory bellow
