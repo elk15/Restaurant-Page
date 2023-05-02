@@ -46,3 +46,11 @@ NavBar.contactLink.addEventListener('click', () => {
 NavBar.navLogo.addEventListener('click', () => {
     redirectToPage(Home);
 });
+
+Home.menuBtn.addEventListener('click', () => {
+    redirectToPage(Menu);
+});
+
+Home.locationBtn.addEventListener('click', () => {
+    redirectToPage(HoursAndLocation);
+});

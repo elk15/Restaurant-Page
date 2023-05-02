@@ -9,9 +9,12 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    plugins: [new HtmlWebpackPlugin({
-        favicon: './src/imgs/julesfavicon.png',
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            favicon: './src/imgs/julesfavicon.png',
+        }),
+    ],
     module: {
         rules: [
             {
